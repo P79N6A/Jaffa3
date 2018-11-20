@@ -1,0 +1,35 @@
+schema_version: 1
+bind_host: 10.100.2.4
+bind_port: 80
+auth_name: zmeu
+auth_pass: 123b33f
+coredns:
+  port: 53
+  protection_enabled: true
+  filtering_enabled: true
+  safebrowsing_enabled: true
+  safesearch_enabled: true
+  parental_enabled: true
+  parental_sensitivity: 13
+  blocked_response_ttl: 10
+  querylog_enabled: true
+  upstream_dns:
+  - tls://8.8.8.8:853
+  bind: 10.100.2.4
+filters:
+- id: 1541267071
+  url: https://whitehat.ro/~zmeu/whs/filter.txt
+  name: WhiteHat Simplified Domain Names filter
+  enabled: true
+  last_updated: 2018-11-03T22:48:37.891661902+02:00
+- id: 1541267072
+  url: https://adaway.org/hosts.txt
+  name: AdAway
+  enabled: true
+  last_updated: 2018-11-03T22:49:47.732888586+02:00
+- id: 1541267074
+  url: http://www.malwaredomainlist.com/hostslist/hosts.txt
+  name: MalwareDomainList.com Hosts List
+  enabled: true
+  last_updated: 2018-11-03T22:50:18.815927213+02:00
+user_rules: []

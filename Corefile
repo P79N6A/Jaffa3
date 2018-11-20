@@ -1,0 +1,19 @@
+:53 {
+    dnsfilter {
+        safebrowsing
+        parental 13
+        safesearch
+        querylog
+        blocked_ttl 10
+		filter 1541267071 "/home/ana/whitehat-security-code/data/filters/1541267071.txt"
+		filter 1541267072 "/home/ana/whitehat-security-code/data/filters/1541267072.txt"
+		filter 1541267074 "/home/ana/whitehat-security-code/data/filters/1541267074.txt"
+    }
+    hosts {
+        fallthrough
+    }
+    forward . tls://8.8.8.8:853
+    cache
+    prometheus :9153
+    bind 10.100.2.4
+}
